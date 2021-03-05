@@ -5,9 +5,9 @@ function Search(props) {
   const searchFunction = (event)=>{
     const fullName = event.target.value.trim().toLowerCase();
     if(event.keyCode===8){
-        props.searchFunction(fullName)
+        props.searchFunc(fullName)
     }
-    props.searchFunction(fullName);
+    props.searchFunc(fullName);
 }
 
     return (<form className="form">

@@ -31,19 +31,26 @@ async componentDidMount() {
 }
 
 search = (str) => {
-  const filteredList = this.state.employees.filter(employee => {
+  const filtered = this.state.employees.filter(employee => {
     const fullName = (employee.name.first + " " + employee.name.last).toLowerCase();
     return fullName.startsWith(str);
   })
-  this.setState({ filterList: filteredList });
+  this.setState({ filterList: filtered });
 }
+
+ sortTable = (str) => {
+   console.log(str)
+   this.setState({ filterList: str });
+ }
 
 render() {
 
   return (
   <div className="App">
-  <Search searchFunction={this.search} />
-      <Table employees={this.state.filterList} />
+  <Search searchFunc={this.search} />
+
+      <Table employees={this.state.filterList}
+              sortFunc={this.sortTable} />
     </div> 
     );
 }
