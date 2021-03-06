@@ -15,6 +15,7 @@ class App extends React.Component {
 
 
 
+  // get the users
 async componentDidMount() {
 
   let randomAPI = "https://randomuser.me/api/?results=50"
@@ -30,17 +31,28 @@ async componentDidMount() {
   })
 }
 
-search = (str) => {
+search = (searchTerm) => {
   const filtered = this.state.employees.filter(employee => {
     const fullName = (employee.name.first + " " + employee.name.last).toLowerCase();
-    return fullName.startsWith(str);
+    return fullName.startsWith(searchTerm);
   })
   this.setState({ filterList: filtered });
 }
 
  sortTable = (str) => {
    console.log(str)
-   this.setState({ filterList: str });
+   if(!this.state.sorted)
+   {
+      this.setState({ filterList: str });
+      this.state.sorted = true;
+   }
+   else
+   {
+     this.setState({filterList : this.state.employees})
+     this.state.sorted = false
+
+   }
+
  }
 
 render() {

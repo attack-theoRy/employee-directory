@@ -4,7 +4,7 @@ import EmployeeRow from "./EmployeeRow'"
 function Table(props)  {
 
     const sortTable = (event) => {
-      //  console.log(props.employees)
+
 
         var employeeSorted = props.employees.sort((a, b) => {
             let fa = a.name.first.toLowerCase(),
@@ -27,12 +27,12 @@ function Table(props)  {
         <table className="table table-dark">
             <thead>
                 <tr>
-                <th scope="col"></th>
-                    <th scope="col" onClick={sortTable} >Name</th>
-                    <th scope="col" >Email</th>
-                    <th scope="col" >Age</th>
-                    <th scope="col" >State</th>
-                    <th scope="col" >Phone</th>
+                <th category="col"></th>
+                    <th category="col" onClick={sortTable} >Name</th>
+                    <th category="col" >Email</th>
+                    <th category="col" >Age</th>
+                    <th category="col" >State</th>
+                    <th category="col" >Phone</th>
                 </tr>
             </thead>
             <tbody>
