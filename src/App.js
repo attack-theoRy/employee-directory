@@ -63,7 +63,7 @@ render() {
   return (
   <div className="App">
     <TitleBanner />
-  <Search searchFunc={this.search} />
+    <Search searchFunc={this.search} />
 
       <Table employees={this.state.filterList}
               sortFunc={this.sortTable} />
