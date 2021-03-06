@@ -3,6 +3,8 @@ import './App.css';
 import Search from "./component/Search";
 import axios from 'axios';
 import Table from "./component/Table"
+import TitleBanner from "./component/TitleBanner"
+import'bootstrap/dist/css/bootstrap.css';
 
 
 class App extends React.Component {
@@ -60,6 +62,7 @@ render() {
 
   return (
   <div className="App">
+    <TitleBanner />
   <Search searchFunc={this.search} />
 
       <Table employees={this.state.filterList}
