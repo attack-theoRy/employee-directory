@@ -5,7 +5,7 @@ function EmployeeRow(props) {
     return(
         <tr>
             <td>
-            <img src={props.picture.thumbnail}  className="img-thumbnail"></img>
+            <img src={props.picture.thumbnail}  className="profilePic"></img>
             </td>
             <td>{props.name.first + "  " + props.name.last}</td>
             <td>{props.email}</td>

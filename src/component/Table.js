@@ -28,7 +28,7 @@ function Table(props)  {
             <thead>
                 <tr>
                 <th category="col"></th>
-                    <th category="col" onClick={sortTable} >Name</th>
+                    <th category="col" onClick={sortTable} >Name (click to sort)</th>
                     <th category="col" >Email</th>
                     <th category="col" >Age</th>
                     <th category="col" >State</th>

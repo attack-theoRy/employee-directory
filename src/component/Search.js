@@ -19,7 +19,7 @@ function Search(props) {
             placeholder="Search by name!"
           />
          <br></br>
-          <button onClick={props.handleFormSubmit}>Submit</button>    </form>)
+          </form>)
 
 
 }

@@ -29,7 +29,6 @@ async componentDidMount() {
       filterList : res.data.results
     })
 
-
   })
 }
 
