@@ -39,9 +39,7 @@ To install repo locally
 ` npm init -y`
 ` npm i bootstrap `
 ` npm i axios `
-
-
-
+run `npm start ` and open a browser to http://localhost:3000/employee-directory
 
 
 ## Tech
